@@ -46,17 +46,16 @@ function onConnectionLost(responseObject){
 }
 
 function onMessageArrived(message){
-    console.log("OnMessageArrived: "+message.payloadString);
-    document.getElementById("messages").innerHTML += "<span> Field: "+message.destinationName+" | Value : "+message.payloadString + "</span><br>";
+    // console.log("OnMessageArrived: " + message.payloadString);
+    const element = document.createElement('div');
+    element.append("Field: " + message.destinationName + " | Value : " + message.payloadString);
+    const autoscrollableMessages = document.querySelector('.messages');
+    autoscrollableMessages.append(element);
 }
 
 function startDisconnect(){
     client.disconnect();
     document.getElementById("messages").innerHTML += "<span> Disconnected. </span><br>";
-
-
-
-
 }
 
 function publishMessage(){

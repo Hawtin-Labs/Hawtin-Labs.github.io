@@ -3,6 +3,7 @@ body {
     background-color: black;
     color: whitesmoke;
 }
+
 .wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -12,65 +13,72 @@ body {
 }
 
 input {
-    width : 150px;
+    width: 150px;
     margin: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 input[type=text] {
-  width:100%;
+    width: 100%;
     padding: 12px 12px;
-        height: 10px;
+    height: 10px;
 
     margin: 8px 0;
     background-color: rgb(39, 39, 39);
     color: whitesmoke;
 }
+
 input[type=password] {
-  width:100%;
+    width: 100%;
     padding: 12px 12px;
-        height: 10px;
+    height: 10px;
 
     margin: 4px 2px;
 }
+
 input[type=button] {
-    background-color:rgb(39, 39, 39);
+    background-color: rgb(39, 39, 39);
     border: none;
     color: whitesmoke;
-    
+
     text-decoration: none;
     font-weight: bold;
-        height: 20px;
+    height: 20px;
 
     margin: 4px 2px;
     cursor: pointer;
 }
+
 input[type=text]:focus {
     background-color: grey;
 }
+
 input[type=button]:hover {
     background-color: grey;
 }
 
-#Main_heading{
-     text-align: center;
+#Main_heading {
+    text-align: center;
 }
 
-#messages {
-    margin-top: 12px;
-    margin-bottom: 12px;
+.messages-container {
     padding: 12px;
-    width:100%;
+    width: 100%;
     display: inline-block;
-    border:1px solid whitesmoke;
+    border: 1px solid whitesmoke;
+    height: 450px;
     max-height: 450px;
     min-height: 450px;
-    overflow: scroll;
     color: whitesmoke;
     scrollbar-color: grey rgb(39, 39, 39);
-}
-#messages span {
-    overflow-y: scroll;
     overflow: scroll;
+}
+
+.autoscrollable-wrapper {
+    overflow: scroll;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
 }
